@@ -35,6 +35,7 @@ public func fsyncDefault(file: Foundation.FileHandle) throws {
   try file.synchronize()
 }
 
+/// A dummy "fsync"(does nothing)
 public func fsyncNop(file: Foundation.FileHandle) throws {}
 
 /// Saves float values to the specified URL and sync using specified fsync.
