@@ -37,6 +37,12 @@ public func fsyncDefault(file: Foundation.FileHandle) throws {
 
 public func fsyncNop(file: Foundation.FileHandle) throws {}
 
+/// Saves float values to the specified URL and sync using specified fsync.
+///
+/// - Parameters:
+///   - floats: The float values to save
+///   - url: The url(filename) to use for saving the float values
+///   - fsync: The func to use as "sync"(default: fsync)
 public func floats2bytes2url(
   floats: [Float32],
   url: Foundation.URL,
