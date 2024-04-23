@@ -31,6 +31,7 @@ public func pointer2file(
   try data2file(dataLike: buf, file: file)
 }
 
+/// An "fsync"(flush; OS buffer -> storage)
 public func fsyncDefault(file: Foundation.FileHandle) throws {
   try file.synchronize()
 }
